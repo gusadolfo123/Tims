@@ -40,10 +40,26 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="container-fluid">
         <partial name="_CookieConsentPartial" />
         <main role="main" class="pb-3">
-            @RenderBody()
+            <div class="row">
+                <div id="body-left" class="col-12 col-md-2 d-none d-md-block">
+                    <ul class="menu mt-5">
+                        <li class="activado" id="Inicio"><a href="inicio.html">INICIO</a></li>
+                        <li class="activado" id="Usuarios"><a href="usuarios.html">USUARIOS</a></li>
+                        <li class="activado" id="Proveedores"><a href="proveedores.html">PROVEEDORES</a></li>
+                        <li class="activado" id="Negocio"><a href="negocio.html">NEGOCIO</a></li>
+                        <li class="activado" id="Suscriptor"><a href="suscriptor.html">SUSCRIPTORES</a></li>
+                        <li class="activado" id="Cuentas"><a href="cuentas.html">CUENTAS</a></li>
+                        <li class="activado" id="Facturas"><a href="factura.html">FACTURAS</a></li>
+                        <li class="activado" id="Reportes"><a href="reportes.html">REPORTES</a></li>
+                    </ul>
+                </div>
+                <div id="body-righ" class="col-12 col-md-10">
+                    @RenderBody()
+                </div>
+            </div>
         </main>
     </div>
 

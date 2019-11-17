@@ -54,3 +54,137 @@ body {
   height: 60px;
   line-height: 60px; /* Vertically center the text there */
 }
+
+
+
+
+/* Custom CSS */
+body {
+    background-image: url('../img/fondo.fw.png');
+    background-repeat: no-repeat;
+    background-size: 102vw 110vh;
+    background-position: -2vw -10vh;
+}
+
+
+h1 {
+    margin: auto;
+    color: white;
+    text-align: center;
+}
+
+label {
+    /*outline: 2px solid white;*/
+}
+
+#cabezera {
+    background-image: url('../img/nombr.fw.png');
+    background-repeat: no-repeat;
+    background-size: 100vw 9vh;
+    height: 10vh;
+}
+
+#body-left {
+    /*background-color: orangered;*/
+    height: 80vh;
+}
+
+#body-righ {
+    /*background-color: aquamarine;*/
+    height: 80vh;
+}
+
+#footer {
+    /*background-color: yellow;*/
+    height: 10vh;
+}
+
+.menuUsuario {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.51);
+    margin-top: 100vh;
+    margin: auto;
+    display: none;
+    /*outline: 2px solid blue;*/
+}
+
+.menuFactura {
+    color: white;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.61);
+    margin: auto;
+    /*height: 90vh;*/
+    display: none;
+    /*outline: 2px solid blue;*/
+}
+
+#formFactura {
+    /* outline: 2px solid blue;*/
+}
+
+#tableUsu {
+    background-color: rgba(0, 0, 0, 0.71);
+}
+
+#btnSave, #btnCancel {
+    margin: auto;
+}
+
+.form-control, .custom-select, .col-form-label {
+    margin-top: 10px;
+}
+
+
+/*****NAVIGATION BAR******/
+.menu {
+    list-style: none;
+    margin: 50px 0 0 0;
+    padding: 0;
+    width: 100%;
+    height: 80vh;
+    /*background-color: grey;*/
+    /*outline: 1px solid green;*/
+    /*padding-left: 0;*/
+}
+
+    .menu a {
+        list-style: none;
+        display: block;
+        width: 100%;
+        color: whitesmoke;
+        font-family: Arial;
+        font-weight: bold;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+
+#Inicio a:hover, #Usuarios a:hover, #Proveedores a:hover, #Suscriptor a:hover, #Negocio a:hover, #Cuentas a:hover,
+#Facturas a:hover, #Reportes a:hover {
+    background-color: white;
+    color: black;
+    margin-left: 1em;
+    display: block;
+}
+
+#imgesta {
+    width: 100vw;
+    height: 60vh;
+}
+
+/***************************************REPORTES****************************************/
+.fecha, .cuenta, .negocio {
+    background-color: rgba(150, 0, 0, 0.71);
+    height: 100px;
+    margin: auto;
+    width: 350px;
+}
+
+.labelRerpotes {
+    color: white;
+    font-size: 30px;
+    margin: 0px;
+}
+
+
+
