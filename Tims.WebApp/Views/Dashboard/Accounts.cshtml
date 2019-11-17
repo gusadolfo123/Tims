@@ -1,0 +1,128 @@
+﻿
+@{
+    ViewData["Title"] = "Accounts";
+}
+
+<form class="form-inline">
+    <h1 class="col-12  col-md-10">ADMINISTRADOR DE CUENTAS</h1>
+    <!--<label>Buscar usuario</label>-->
+    <input id="txtName" type="text" placeholder="Nombre de cuenta" class="col-12 col-md-6 form-control mb-2 mr-sm-2 mb-sm-0" />&nbsp;
+
+    <button id="btnSearch" type="button" class="col-3 col-md-1 btn btn-primary">Buscar</button> &nbsp;
+    <button id="btnClear" type="button" class="col-3 col-md-1 btn btn-primary">Limpiar</button>&nbsp;
+    <button id="btnAdd" type="button" onclick="mostrar()" class="col-5 col-md-2 btn btn-primary full-right ">Agregar</button> &nbsp;
+</form>
+<p></p>
+<div id="dialog">
+    <input type="hidden" id="ID" />
+    <form id="menu" class="menuUsuario col-12 col-md-6">
+        <div class="form-group ">
+            <input type="text" class="form-control" id="NumeroCuenta" placeholder="Número cuenta">
+        </div>
+        <div class="form-group">
+            <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                <option selected>Suscriptor</option>
+                <option value="1">Codensa</option>
+                <option value="2">Emgesa</option>
+                <option value="3">Enel Green Power</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <!--<input type="text" class="form-control" id="negocio" placeholder="negocio" />-->
+            <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                <option selected>Negocio</option>
+                <option value="1">GDS</option>
+                <option value="2">ATOS</option>
+                <option value="3">TIVIT</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <!--<input type="text" class="form-control" id="negocio" placeholder="proveedor" />-->
+            <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                <option selected>Proveedor</option>
+                <option value="1">ETB</option>
+                <option value="2">Telefonica</option>
+                <option value="3">Claro</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="PortalDescarga" placeholder="Portal de descarga" />
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="FechaDescarga" placeholder="Fecha de descarga" />
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="DisCorte" placeholder="Día de corte" />
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="Observaciones" placeholder="Descripcion de la cuenta" />
+        </div>
+        <div class="form-group">
+            <!--<input type="text" class="form-control" id="Estado" placeholder="Estado" />-->
+            <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                <option selected>Estado</option>
+                <option value="1">Activado</option>
+                <option value="2">Desactivado</option>
+            </select>
+        </div>
+        <button type="button" id="btnSave" class="btn btn-primary col-12 col-md-4 ">Guardar</button>&nbsp;
+        <button type="button" id="btnCancel" onclick="ocultar()" class="btn btn-primary col-12 col-md-4">Cancelar</button>
+    </form>
+</div>
+<div class="table-responsive">
+    <table id="tableUsu" class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th>#ID</th>
+                <th>Numero Cuenta</th>
+                <th>Suscriptor</th>
+                <th>Negocio</th>
+                <th>Proveedor</th>
+                <th>Portal Descarga</th>
+                <th>Fecha Descarga</th>
+                <th>Día de Corte</th>
+                <th>Descrición de la cuenta</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>206160</td>
+                <td>Codensa</td>
+                <td>GDS</td>
+                <td>Avantel</td>
+                <td>http://www.avantel.com.co/</td>
+                <td>3 primeros dias de cada mes </td>
+                <td>31 de cada mes</td>
+                <td>Plan Ilimitado</td>
+                <td>Activado</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>1969637571</td>
+                <td>Codensa</td>
+                <td>GDS</td>
+                <td>ETB</td>
+                <td>http://eservices.etb.com.co/eservices2010/Ingreso.aspx</td>
+                <td>17 y 18 de cada mes  </td>
+                <td>Último día del mes</td>
+                <td>Red Inteligente</td>
+                <td>Activado</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>860063875-0010</td>
+                <td>Emgesa</td>
+                <td>TIVIT</td>
+                <td>Telefonica</td>
+                <td>http://www.movistar.co/web/empresas/</td>
+                <td>10 y 12 de cada mes</td>
+                <td>Último día del mes</td>
+                <td>Larga Distancia</td>
+                <td>Desactivado</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>

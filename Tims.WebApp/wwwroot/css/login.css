@@ -1,0 +1,76 @@
+﻿body {
+    width: 100vw;
+    height: 100vh;
+    /*background-color: grey;*/
+}
+
+.container-fluid {
+    width: 100vw;
+    height: 100vh;
+}
+
+#fondo {
+    position: relative;
+    height: 100vh;
+    background-color: grey;
+    background-image: url('../img/illustration.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#logo {
+    width: 300px;
+    height: 150px;
+}
+
+
+#login {
+    /*background-color: aquamarine;*/
+    height: 100vh;
+    margin: auto;
+}
+
+.lTivit {
+    width: 30vw;
+    margin: auto;
+    margin-top: 75px;
+    padding: 10px;
+}
+
+#lTivit {
+    width: 20vw;
+    margin-top: 75px;
+    padding: 10px;
+}
+
+.form1 {
+    margin-top: 200px;
+    padding: 10px;
+    /*outline: 2px solid blue*/
+}
+
+.form-group {
+    width: 350PX;
+    /*outline: 2px solid blue;*/
+}
+
+#btnIngresar {
+    width: 300PX;
+}
+
+@media (min-width: 300px) {
+    .form1 {
+        margin: auto;
+        margin-top: 100px;
+        display: block;
+        width: 350PX;
+    }
+}
+
+@media (min-width: 1000px) {
+    .form1 {
+        margin-top: 150px;
+        display: block;
+        width: 350PX;
+    }
+}

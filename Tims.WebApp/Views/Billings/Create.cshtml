@@ -1,0 +1,123 @@
+﻿@model Tims.WebApp.Models.Billing
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 class="mb-3">ADMINISTRADOR DE FACTURAS</h1>
+
+<div id="dialog">
+    <form asp-action="Create" class="row text-white menuFactura" id="menu">
+        <div asp-validation-summary="ModelOnly" class="text-white"></div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label asp-for="AccountNumber" class="control-label"></label>
+                <input asp-for="AccountNumber" class="form-control" /> 
+                <span asp-validation-for="AccountNumber" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AccountDescription" class="control-label"></label>
+                <input asp-for="AccountDescription" class="form-control" />
+                <span asp-validation-for="AccountDescription" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Supplier" class="control-label"></label>
+                <input asp-for="Supplier" class="form-control" />
+                <span asp-validation-for="Supplier" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Subscriber" class="control-label"></label>
+                <input asp-for="Subscriber" class="form-control" />
+                <span asp-validation-for="Subscriber" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReceivedInvoice" class="control-label"></label>
+                <input asp-for="ReceivedInvoice" class="form-control" />
+                <span asp-validation-for="ReceivedInvoice" class="text-danger font-weight-bold"></span>
+            </div>
+
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label asp-for="PreviousBalance" class="control-label"></label>
+                <input asp-for="PreviousBalance" class="form-control" />
+                <span asp-validation-for="PreviousBalance" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReceptionTypeId" class="control-label"></label>
+                <select asp-for="ReceptionTypeId" class="form-control" asp-items="ViewBag.ReceptionTypeId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="MonthlyCharge" class="control-label"></label>
+                <input asp-for="MonthlyCharge" class="form-control" />
+                <span asp-validation-for="MonthlyCharge" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CutoffDate" class="control-label"></label>
+                <input asp-for="CutoffDate" class="form-control" />
+                <span asp-validation-for="CutoffDate" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TaxBase" class="control-label"></label>
+                <input asp-for="TaxBase" class="form-control" />
+                <span asp-validation-for="TaxBase" class="text-danger font-weight-bold"></span>
+            </div>
+
+
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label asp-for="ConsumptionTax" class="control-label"></label>
+                <input asp-for="ConsumptionTax" class="form-control" />
+                <span asp-validation-for="ConsumptionTax" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalChargeMonth" class="control-label"></label>
+                <input asp-for="TotalChargeMonth" class="form-control" />
+                <span asp-validation-for="TotalChargeMonth" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExtraCharge" class="control-label"></label>
+                <input asp-for="ExtraCharge" class="form-control" />
+                <span asp-validation-for="ExtraCharge" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FullMonth" class="control-label"></label>
+                <input asp-for="FullMonth" class="form-control" />
+                <span asp-validation-for="FullMonth" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PreviouPayment" class="control-label"></label>
+                <input asp-for="PreviouPayment" class="form-control" />
+                <span asp-validation-for="PreviouPayment" class="text-danger font-weight-bold"></span>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label asp-for="FullPriceBill" class="control-label"></label>
+                <input asp-for="FullPriceBill" class="form-control" />
+                <span asp-validation-for="FullPriceBill" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TimelyPayment" class="control-label"></label>
+                <input asp-for="TimelyPayment" class="form-control" />
+                <span asp-validation-for="TimelyPayment" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartDateBilledPeriod" class="control-label"></label>
+                <input asp-for="StartDateBilledPeriod" class="form-control" />
+                <span asp-validation-for="StartDateBilledPeriod" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EndDateBilledPeriod" class="control-label"></label>
+                <input asp-for="EndDateBilledPeriod" class="form-control" />
+                <span asp-validation-for="EndDateBilledPeriod" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Digitalizar" class="btn btn-primary" />
+            </div>
+        </div>
+    </form>
+
+</div>
+

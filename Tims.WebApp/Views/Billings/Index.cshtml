@@ -1,0 +1,160 @@
+﻿@model IEnumerable<Tims.WebApp.Models.Billing>
+
+@{
+    ViewData["Title"] = "ADMINISTRADOR DE FACTURAS";
+}
+
+<h1>ADMINISTRADOR DE FACTURAS</h1>
+
+<p>
+    
+</p>
+
+<div class="form-inline mb-3" id="formFactura">
+    <input id="txtName" type="text" placeholder="Número de factura" class="col-12 col-md-6 form-control mb-2 mr-sm-2 mb-sm-0" />&nbsp;
+    <button id="btnSearch" type="button" class="col-3 col-md-1 btn btn-primary">Buscar</button> &nbsp;
+    <button id="btnClear" type="button" class="col-3 col-md-1 btn btn-primary">Limpiar</button>&nbsp;
+    <a asp-action="Create" id="btnAdd" class="col-5 col-md-2 btn btn-primary full-right ">Agregar</a>
+</div>
+
+<div class="table-responsive">
+    <table id="tableUsu" class="table table-dark table-hover">
+        <thead>
+            <tr> 
+                <th>
+                    @Html.DisplayNameFor(model => model.BillingId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AccountNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AccountDescription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Supplier)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Subscriber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReceivedInvoice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PreviousBalance)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MonthlyCharge)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CutoffDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TaxBase)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ConsumptionTax)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TotalChargeMonth)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ExtraCharge)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FullMonth)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PreviouPayment)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FullPriceBill)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TimelyPayment)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StartDateBilledPeriod)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EndDateBilledPeriod)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReceptionType)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BillingId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AccountNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AccountDescription)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Supplier)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Subscriber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ReceivedInvoice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PreviousBalance)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MonthlyCharge)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CutoffDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TaxBase)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ConsumptionTax)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TotalChargeMonth)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ExtraCharge)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FullMonth)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PreviouPayment)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FullPriceBill)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TimelyPayment)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StartDateBilledPeriod)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EndDateBilledPeriod)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ReceptionType.ReceptionTypeName)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.BillingId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.BillingId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.BillingId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

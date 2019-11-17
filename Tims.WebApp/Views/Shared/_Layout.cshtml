@@ -20,22 +20,16 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Tims.WebApp</a>
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Dashboard" asp-action="Index">
+                    <img src="~/img/nombr.fw.png" />
+                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <partial name="_LoginPartial" />
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </nav>
@@ -46,14 +40,46 @@
             <div class="row">
                 <div id="body-left" class="col-12 col-md-2 d-none d-md-block">
                     <ul class="menu mt-5">
-                        <li class="activado" id="Inicio"><a href="inicio.html">INICIO</a></li>
-                        <li class="activado" id="Usuarios"><a href="usuarios.html">USUARIOS</a></li>
-                        <li class="activado" id="Proveedores"><a href="proveedores.html">PROVEEDORES</a></li>
-                        <li class="activado" id="Negocio"><a href="negocio.html">NEGOCIO</a></li>
-                        <li class="activado" id="Suscriptor"><a href="suscriptor.html">SUSCRIPTORES</a></li>
-                        <li class="activado" id="Cuentas"><a href="cuentas.html">CUENTAS</a></li>
-                        <li class="activado" id="Facturas"><a href="factura.html">FACTURAS</a></li>
-                        <li class="activado" id="Reportes"><a href="reportes.html">REPORTES</a></li>
+                        <li class="activado" id="Inicio">
+                            <a class="" asp-area="" asp-controller="Dashboard" asp-action="Index">
+                                INICIO
+                            </a>
+                        </li>
+                        <li class="activado" id="Usuarios">
+                            <a class="" asp-area="" asp-controller="Dashboard" asp-action="Users">
+                                USUARIOS
+                            </a>
+                        </li>
+                        <li class="activado" id="Proveedores">
+                            <a class="" asp-area="" asp-controller="Dashboard" asp-action="Suppliers">
+                                PROVEEDORES
+                            </a>
+                        </li>
+                        <li class="activado" id="Negocio">
+                            <a class="" asp-area="" asp-controller="Dashboard" asp-action="Commerce">
+                                NEGOCIO
+                            </a>
+                        </li>
+                        <li class="activado" id="Suscriptor">
+                            <a class="" asp-area="" asp-controller="Dashboard" asp-action="Subscribers">
+                                SUSCRIPTORES
+                            </a>
+                        </li>
+                        <li class="activado" id="Cuentas">
+                            <a class="" asp-area="" asp-controller="Dashboard" asp-action="Accounts">
+                                CUENTAS
+                            </a>
+                        </li>
+                        <li class="activado" id="Facturas">
+                            <a class="" asp-area="" asp-controller="Billings" asp-action="Index">
+                                FACTURAS
+                            </a>
+                        </li>
+                        <li class="activado" id="Reportes">
+                            <a class="" asp-area="" asp-controller="Dashboard" asp-action="Reports">
+                                REPORTES
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div id="body-righ" class="col-12 col-md-10">
@@ -63,11 +89,9 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2019 - Tims.WebApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+    @*<footer class="bg-white pt-4 pb-4 text-center fixed-bottom">
+        &copy; - TIVIT 2019
+    </footer>*@
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>

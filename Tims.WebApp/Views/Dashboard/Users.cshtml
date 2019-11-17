@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewData["Title"] = "Users";
+}
+
+<form class="form-inline">
+    <h1 class="col-12  col-md-10">ADMINISTRADOR DE USUARIOS</h1>
+    <!--<label>Buscar usuario</label>-->
+    <input id="txtName" type="text" placeholder="Nombre o correo" class="col-12 col-md-6 form-control mb-2 mr-sm-2 mb-sm-0" />&nbsp;
+    <button id="btnSearch" type="button" class="col-3 col-md-1 btn btn-primary">Buscar</button> &nbsp;
+    <button id="btnClear" type="button" class="col-3 col-md-1 btn btn-primary">Limpiar</button>&nbsp;
+    <button id="btnAdd" type="button" onclick="mostrar()" class="col-5 col-md-2 btn btn-primary full-right ">Agregar</button> &nbsp;
+</form>
+<p></p>
+<div id="dialog">
+    <input type="hidden" id="ID" />
+    <form id="menu" class="menuUsuario col-12 col-md-6">
+        <div class="form-group ">
+            <input type="text" class="form-control" id="NombreUsuario" placeholder="Nombre">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="ApellidoUsuario" placeholder="Apellido" />
+        </div>
+        <div class="form-group">
+            <input type="email" class="form-control" id="CorreoUsuario" placeholder="Correo" />
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" id="ContrasenaUsuario" placeholder="Contraseña" />
+        </div>
+        <div class="form-group">
+            <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                <option selected>Cargo</option>
+                <option value="1">Administrador</option>
+                <option value="2">Lider</option>
+                <option value="3">Analista</option>
+                <option value="4">Cliente</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                <option selected>Estado</option>
+                <option value="1">Activado</option>
+                <option value="2">Desactivado</option>
+            </select>
+        </div>
+        <button type="button" id="btnSave" class="btn btn-primary col-12 col-md-4 ">Guardar</button>&nbsp;
+        <button type="button" id="btnCancel" onclick="ocultar()" class="btn btn-primary col-12 col-md-4">Cancelar</button>
+    </form>
+</div>
+<div class="table-responsive">
+    <table id="tableUsu" class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th>#ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Correo</th>
+                <th>Cargo</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Pedro Luis</td>
+                <td>Moreno</td>
+                <td>pedro.moreno@tivit.com</td>
+                <td>Analista</td>
+                <td>Activo</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Viviana Andrea</td>
+                <td>Lugo Suarez</td>
+                <td>viviana.lugo@tivit.com</td>
+                <td>Lider</td>
+                <td>Activo</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    

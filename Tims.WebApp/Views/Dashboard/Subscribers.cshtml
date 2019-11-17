@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewData["Title"] = "Subscribers";
+}
+
+<form class="form-inline">
+    <h1 class="col-12  col-md-10">ADMINISTRADOR DE SUSCRIPTORES</h1>
+    <!--<label>Buscar usuario</label>-->
+    <input id="txtName" type="text" placeholder="Nombre de suscriptor" class="col-12 col-md-6 form-control mb-2 mr-sm-2 mb-sm-0" />&nbsp;
+
+    <button id="btnSearch" type="button" class="col-3 col-md-1 btn btn-primary">Buscar</button> &nbsp;
+    <button id="btnClear" type="button" class="col-3 col-md-1 btn btn-primary">Limpiar</button>&nbsp;
+    <button id="btnAdd" type="button" onclick="mostrar()" class="col-5 col-md-2 btn btn-primary full-right ">Agregar</button> &nbsp;
+</form>
+<p></p>
+<div id="dialog">
+    <input type="hidden" id="ID" />
+    <form id="menu" class="menuUsuario col-12 col-md-6">
+        <div class="form-group ">
+            <input type="text" class="form-control" id="NombreSuscriptor" placeholder="Nombre suscriptor">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="DescripcionSuscriptor" placeholder="Descripción" />
+        </div>
+        <div class="form-group">
+            <!--<input type="text" class="form-control" id="Estado" placeholder="Estado" />-->
+            <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                <option selected>Estado</option>
+                <option value="1">Activado</option>
+                <option value="2">Desactivado</option>
+            </select>
+        </div>
+        <button type="button" id="btnSave" class="btn btn-primary col-12 col-md-4 ">Guardar</button>&nbsp;
+        <button type="button" id="btnCancel" onclick="ocultar()" class="btn btn-primary col-12 col-md-4">Cancelar</button>
+    </form>
+</div>
+<div class="table-responsive">
+    <table id="tableUsu" class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th>#ID</th>
+                <th>Nombre</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Codensa</td>
+                <td>Activo</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Emgesa</td>
+                <td>Activo</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Enel Green Power</td>
+                <td>Activo</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
